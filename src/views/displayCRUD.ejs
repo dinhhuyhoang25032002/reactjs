@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get CRUD</title>
+
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 2px solid #1a1818;
+            text-align: left;
+            padding: 8px;
+            color: green;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>FistName</th>
+            <th>LastName</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>PhoneNumber</th>
+            <th>Gender</th>
+        </tr>
+
+        <% for(let i=0; i < datatable.length; i++) { %>
+            <tr>
+                <td>
+                    <%= datatable[i].firstName %>
+                </td>
+                <td>
+                    <%= datatable[i].lastName %>
+                </td>
+                <td>
+                    <%= datatable[i].email %>
+                </td>
+                <td>
+                    <%= datatable[i].address %>
+                </td>
+                <td>
+                    <%= datatable[i].phoneNumber %>
+                </td>
+                <td>
+                    <%= datatable[i].gender %>
+                </td>
+                   
+            <% } %>
+
+    </table>
+</body>
+
+</html>
